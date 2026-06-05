@@ -198,8 +198,8 @@ body {
 
 .phone-wrap {
   position: fixed;
-  left: 26px;
-  bottom: 26px;
+  right: 24px;
+  bottom: 92px;
   z-index: 50;
 }
 
@@ -238,7 +238,7 @@ body {
 .flip-phone {
   display: none;
   width: 190px;
-  transform-origin: bottom left;
+  transform-origin: bottom right;
 }
 
 .flip-phone.open {
