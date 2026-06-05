@@ -2,7 +2,13 @@ const phoneButton = document.getElementById("phoneButton");
 const flipPhone = document.getElementById("flipPhone");
 
 phoneButton.addEventListener("click", () => {
-  flipPhone.classList.toggle("open");
+  phoneButton.classList.add("hide");
+  flipPhone.classList.add("open");
+});
+
+flipPhone.addEventListener("click", () => {
+  flipPhone.classList.remove("open");
+  phoneButton.classList.remove("hide");
 });
 
 function vibratePhone() {
