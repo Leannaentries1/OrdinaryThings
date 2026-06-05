@@ -6,8 +6,11 @@ body {
   margin: 0;
   font-family: Georgia, "Times New Roman", serif;
   background:
-    radial-gradient(circle at top left, #d9edff 0, transparent 28%),
-    linear-gradient(135deg, #061426, #0b1f3a 55%, #111827);
+    linear-gradient(rgba(2, 10, 24, 0.35), rgba(2, 10, 24, 0.65)),
+    url("images/blue-wallpaper.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   color: #102033;
   min-height: 100vh;
   overflow-x: hidden;
