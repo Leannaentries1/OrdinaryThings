@@ -674,3 +674,53 @@ body {
     height: 90px;
   }
 }
+
+@media (max-width: 768px) {
+  .site-shell {
+    display: flex;
+    flex-direction: column;
+    width: 94%;
+    margin: 20px auto 180px;
+  }
+
+  .sidebar {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .feed-area {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .profile-card,
+  .post-card {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .tabs {
+    width: 100%;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .tabs button {
+    flex: 0 0 auto;
+  }
+
+  .phone-wrap {
+    right: 12px;
+    bottom: 92px;
+    transform: scale(0.72);
+    transform-origin: bottom right;
+  }
+
+  .secret-button {
+    right: 12px;
+    bottom: 24px;
+    font-size: 11px;
+    padding: 10px 14px;
+  }
+}
