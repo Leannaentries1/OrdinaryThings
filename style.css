@@ -565,3 +565,20 @@ body {
   font-weight: bold;
   cursor: pointer;
 }
+
+.comment-actions {
+  margin: 8px 0;
+}
+
+.emoji-btn {
+  border: 1px solid #b7cce8;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.emoji-btn:hover {
+  transform: scale(1.05);
+}
