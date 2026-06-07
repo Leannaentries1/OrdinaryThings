@@ -83,6 +83,11 @@ function loadMessagesApp() {
 
   const chatBox = document.getElementById("chatBox");
   const nicknameInput = document.getElementById("nicknameInput");
+  const savedNickname = localStorage.getItem("observerNickname");
+
+if (savedNickname) {
+  nicknameInput.value = savedNickname;
+}
   const messageInput = document.getElementById("messageInput");
   const sendMessageBtn = document.getElementById("sendMessageBtn");
 
@@ -108,14 +113,16 @@ function loadMessagesApp() {
   });
 
   sendMessageBtn.addEventListener("click", async (event) => {
-    event.stopPropagation();
+  event.stopPropagation();
 
-    const nickname = nicknameInput.value.trim() || "Observer";
-    const text = messageInput.value.trim();
+  const nickname = nicknameInput.value.trim() || "Observer";
+  const text = messageInput.value.trim();
 
-    if (!text) return;
+  if (!text) return;
 
-    await addDoc(collection(db, "messages"), {
+  localStorage.setItem("observerNickname", nickname);
+
+  await addDoc(collection(db, "messages"), {
       nickname,
       text,
       createdAt: serverTimestamp(),
