@@ -448,7 +448,7 @@ body {
 }
 
 .chat-box {
-  height: 78px;
+  height: 135px;
   overflow-y: auto;
   border: 1px solid #4b5563;
   background: rgba(255, 255, 255, 0.72);
@@ -490,7 +490,7 @@ body {
 }
 
 .chat-message-input {
-  height: 30px;
+  height: 28px;
   resize: none;
 }
 
@@ -500,7 +500,7 @@ body {
   border-radius: 6px;
   background: #061426;
   color: #eef6ff;
-  padding: 5px;
+  padding: 4px;
   cursor: pointer;
   font-size: 9px;
 }
