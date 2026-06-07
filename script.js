@@ -45,7 +45,7 @@ appButtons.forEach((button) => {
     const appName = button.dataset.app;
 
     if (appName === "phone") {
-      phoneAppTitle.textContent = "Observer Hotline";
+      phoneAppTitle.textContent = "The Unfinished Chapter";
       phoneAppText.innerHTML = `
         <strong>Status:</strong> Available<br><br>
         <strong>Response Hours:</strong><br>
@@ -72,7 +72,7 @@ appButtons.forEach((button) => {
 });
 
 function loadMessagesApp() {
-  phoneAppTitle.textContent = "Messages";
+  phoneAppTitle.textContent = "Chapter Notes";
 
   phoneAppText.innerHTML = `
     <div class="chat-box" id="chatBox"></div>
