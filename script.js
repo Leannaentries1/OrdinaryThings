@@ -106,9 +106,9 @@ function loadMessagesApp() {
       const messageBubble = document.createElement("div");
       messageBubble.className = "chat-message";
       messageBubble.innerHTML = `
-        <strong>${escapeHTML(message.nickname || "Observer")}:</strong>
-        <span>${escapeHTML(message.text || "")}</span>
-      `;
+  <strong>${escapeHTML(message.nickname || "Guest")}</strong>
+  <span>${escapeHTML(message.text || "")}</span>
+`;
 
       chatBox.appendChild(messageBubble);
     });
