@@ -73,6 +73,10 @@ function loadMessagesApp() {
   phoneAppTitle.textContent = "Messages";
 
   phoneAppText.innerHTML = `
+  <div class="chat-rules">
+    Be kind. No spam. No weird behavior. The Observers are watching.
+  </div>
+
   <div class="chat-box" id="chatBox"></div>
 
   <input class="chat-input" id="nicknameInput" type="text" placeholder="Nickname" maxlength="18" />
