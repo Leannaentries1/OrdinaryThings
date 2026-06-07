@@ -229,3 +229,22 @@ function vibratePhone() {
 }
 
 setTimeout(vibratePhone, 1800);
+
+const emojiBtn = document.querySelector(".emoji-btn");
+const commentText = document.querySelector(".comment-text");
+
+if (emojiBtn && commentText) {
+  emojiBtn.addEventListener("click", async () => {
+
+    if ("EmojiPicker" in window) {
+      const picker = new EmojiPicker();
+
+      const result = await picker.pick();
+
+      commentText.value += result.unicode;
+    } else {
+      alert("Your browser does not support the emoji picker.");
+    }
+
+  });
+}
