@@ -197,6 +197,21 @@ commentSections.forEach((section) => {
   });
 });
 
+const commentCounters = document.querySelectorAll(".comment-count");
+
+commentCounters.forEach((counter) => {
+  const postId = counter.dataset.postId;
+
+  const commentsQuery = query(
+    collection(db, "postComments", postId, "comments"),
+    orderBy("createdAt", "asc")
+  );
+
+  onSnapshot(commentsQuery, (snapshot) => {
+    counter.textContent = snapshot.size;
+  });
+});
+
 const likeButtons = document.querySelectorAll(".like-btn");
 
 likeButtons.forEach((button) => {
@@ -255,5 +270,3 @@ function vibratePhone() {
 }
 
 setTimeout(vibratePhone, 1800);
-
-  
