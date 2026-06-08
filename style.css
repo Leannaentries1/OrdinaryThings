@@ -632,3 +632,29 @@ body {
     padding: 10px 14px;
   }
 }
+
+.comment-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.comment-bubble {
+  background: #f8fbff;
+  border: 1px solid #c9d9ef;
+  border-radius: 12px;
+  padding: 12px;
+  text-align: left;
+}
+
+.comment-bubble strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #0b2343;
+}
+
+.comment-bubble span {
+  display: block;
+  line-height: 1.5;
+}
