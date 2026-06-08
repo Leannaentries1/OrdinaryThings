@@ -658,3 +658,17 @@ body {
   display: block;
   line-height: 1.5;
 }
+
+.like-btn {
+  border: 0;
+  background: transparent;
+  color: #061426;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 17px;
+  cursor: pointer;
+}
+
+.like-btn.liked {
+  color: #4b8edc;
+  font-weight: bold;
+}
