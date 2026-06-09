@@ -252,6 +252,62 @@ function escapeHTML(text) {
   });
 }
 
+const tabButtons = document.querySelectorAll(".tab-btn");
+const postCards = document.querySelectorAll(".blog-file");
+
+tabButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.dataset.filter;
+
+    tabButtons.forEach((btn) => btn.classList.remove("active"));
+    button.classList.add("active");
+
+    postCards.forEach((post) => {
+      const category = post.dataset.category;
+
+      if (filter === "all" || category === filter) {
+        post.style.display = "";
+      } else {
+        post.style.display = "none";
+      }
+    });
+  });
+});
+
+const followBtn = document.getElementById("followBtn");
+const askBtn = document.getElementById("askBtn");
+const archiveBtn = document.getElementById("archiveBtn");
+
+if (followBtn) {
+  followBtn.addEventListener("click", () => {
+    followBtn.textContent = "Following";
+    followBtn.disabled = true;
+  });
+}
+
+if (askBtn) {
+  askBtn.addEventListener("click", () => {
+    alert("Ask box coming soon.");
+  });
+}
+
+if (archiveBtn) {
+  archiveBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: document.querySelector(".feed-area").offsetTop,
+      behavior: "smooth"
+    });
+  });
+}
+
+function vibratePhone() {
+  phoneButton.classList.add("vibrate");
+
+  setTimeout(() => {
+    phoneButton.classList.remove("vibrate");
+  }, 1200);
+}
+
 setTimeout(vibratePhone, 1800);
 
 const tabButtons = document.querySelectorAll(".tab-btn");
