@@ -290,7 +290,10 @@ if (followBtn) {
 
 if (askBtn) {
   askBtn.addEventListener("click", () => {
-    alert("Ask box coming soon.");
+    document.getElementById("askSection").scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
   });
 }
 
