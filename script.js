@@ -255,14 +255,17 @@ function escapeHTML(text) {
 const tabButtons = document.querySelectorAll(".tab-btn");
 const postCards = document.querySelectorAll(".blog-file");
 
-tabButtons.forEach((button) => {
+document.querySelectorAll(".tab-btn").forEach((button) => {
   button.addEventListener("click", () => {
     const filter = button.dataset.filter;
 
-    tabButtons.forEach((btn) => btn.classList.remove("active"));
+    document.querySelectorAll(".tab-btn").forEach((btn) => {
+      btn.classList.remove("active");
+    });
+
     button.classList.add("active");
 
-    postCards.forEach((post) => {
+    document.querySelectorAll(".blog-file").forEach((post) => {
       const category = post.dataset.category;
 
       if (filter === "all" || category === filter) {
